@@ -1,0 +1,28 @@
+{
+  "author": "Jesse Stuart <jesse@jessestuart.ca>",
+  "name": "js-css",
+  "description": "Write full CSS as though it were inline",
+  "keywords": [
+  ],
+  "version": "0.0.1",
+  "homepage": "http://github.com/jvatic/js-css",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jvaitc/js-css.git"
+  },
+  "license": "BSD",
+  "main": "./main.js",
+  "scripts": {
+		"build": "./build.sh"
+  },
+  "dependencies": {
+		"es6-module-mapper": "^0.0.1",
+    "recast": "^0.9.5",
+		"es6-promise": "^2.0.1"
+  },
+  "devDependencies": {
+  },
+  "engines": {
+    "node": ">= 0.8"
+  }
+}
