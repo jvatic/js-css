@@ -302,6 +302,15 @@ QUnit.test('module with selectors to CSS', function (assert) {
 	var moduleA = {
 		color: '#000',
 		selectors: [
+			[':before', {
+				display: 'block'
+			}],
+			[':after', {
+				display: 'block'
+			}],
+			[':hover', {
+				textDecoration: 'underline'
+			}],
 			['> a', {
 				color: 'inherit'
 			}],
@@ -318,6 +327,18 @@ QUnit.test('module with selectors to CSS', function (assert) {
 	var expectedCSSStr = '';
 	expectedCSSStr += '#'+ cssEl.id + ' {\n';
 	expectedCSSStr += '\tcolor: #000;\n'
+	expectedCSSStr += '}\n'
+
+	expectedCSSStr += '#'+ cssEl.id + ':before {\n';
+	expectedCSSStr += '\tdisplay: block;\n'
+	expectedCSSStr += '}\n'
+
+	expectedCSSStr += '#'+ cssEl.id + ':after {\n';
+	expectedCSSStr += '\tdisplay: block;\n'
+	expectedCSSStr += '}\n'
+
+	expectedCSSStr += '#'+ cssEl.id + ':hover {\n';
+	expectedCSSStr += '\ttext-decoration: underline;\n'
 	expectedCSSStr += '}\n'
 
 	expectedCSSStr += '#'+ cssEl.id + ' > a {\n';
